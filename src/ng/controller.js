@@ -14,6 +14,14 @@ function $ControllerProvider() {
   var controllers = {},
       CNTRL_REG = /^(\S+)(\s+as\s+(\w+))?$/;
 
+  /**
+   * @ngdoc method
+   * @name $controllerProvider#has
+   * @param {string} name Controller name to check.
+   */
+  this.has = function(name) {
+    return controllers.hasOwnProperty(name);
+  };
 
   /**
    * @ngdoc method
